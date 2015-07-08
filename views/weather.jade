@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Weather
+
+  for day in data.list
+    for entry in day.weather
+      p= [entry.main, entry.description].join(' / ')

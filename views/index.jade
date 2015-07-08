@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Cities
+  
+  ul
+    for city in cities
+      li
+        a(href="/cities/#{city._id}")= city.name
