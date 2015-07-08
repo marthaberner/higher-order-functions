@@ -4,7 +4,7 @@
 
 ```
 npm install
-node seeds.js
+node seed.js
 ```
 
 ## JavaScript Training
