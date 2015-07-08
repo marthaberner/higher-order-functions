@@ -15,3 +15,31 @@ Execute `maybeMaybe` passing it two variables that point to functions that log s
 Execute `maybeMaybe` passing it one anonymous function, and one variable that points to a function that log something.
 
 */
+
+function maybeMaybe(doIt, onSuccess, onFailure) {
+  if(doIt) {
+    onSuccess();
+  } else {
+    onFailure();
+  }
+};
+
+maybeMaybe(null, function() {
+  console.log("Success!!");
+}, function() {
+  console.log("Failure!");
+});
+
+var myFailFunc = function() {
+  console.log("Named variable fail!");
+};
+
+var mySuccessFunc = function() {
+  console.log("Named func success!");
+};
+
+maybeMaybe(true, mySuccessFunc, myFailFunc);
+
+maybeMaybe(true, function() {
+  console.log("Successful anonymous func!");
+}, myFailFunc);
