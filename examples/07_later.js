@@ -12,16 +12,16 @@ Execute `laterLater` passing it a variable that points to function that console 
 
 */
 
-function laterLater(callback, arg1, arg2) {
-  setTimeout(callback(arg1, arg2), 3000);
+function laterLater(callback) {
+  setTimeout(callback, 3000);
 }
 
 laterLater(function(arg1, arg2) {
-  console.log(arg1, arg2);
-}, "in 3 seconds", "I appear");
+  console.log("in 3 seconds", "I appear");
+});
 
-var myFunc = function(arg1, arg2) {
-  console.log(arg1, arg2);
+var myFunc = function() {
+  console.log("I am a named func, goodbye");
 }
 
-laterLater(myFunc, "I am a named func", "goodbye");
+laterLater(myFunc);
