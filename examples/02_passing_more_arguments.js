@@ -17,15 +17,11 @@ function hitMeBack (cb, arg1, arg2, arg3) {
 };
 
 hitMeBack(function(arg1, arg2, arg3) {
-  console.log(arg1);
-  console.log(arg2);
-  console.log(arg3);
+  console.log(arg1, arg2, arg3);
 }, "Banana", "apple", 23);
 
 var myFunc = function(arg1, arg2, arg3) {
-  console.log(arg1);
-  console.log(arg2);
-  console.log(arg3);
+  console.log(arg1, arg2, arg3);
 }
 
 hitMeBack(myFunc, "HELLO", "GOODBYE", 15);
